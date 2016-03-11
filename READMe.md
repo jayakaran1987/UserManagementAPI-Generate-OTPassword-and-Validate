@@ -25,7 +25,7 @@ Implemented User Management API contains following API methods.
    }
     ```
 
-##### API Method 1: ValidateOTPasswordForUser
+##### API Method 2: ValidateOTPasswordForUser
 - Parameter: userId, password
 - Route - api/user/validateOTPasswordForUser/{userId}/{password}
 - Example http://localhost:28981/api/user/validateOTPasswordForUser/TestUser1/510842
