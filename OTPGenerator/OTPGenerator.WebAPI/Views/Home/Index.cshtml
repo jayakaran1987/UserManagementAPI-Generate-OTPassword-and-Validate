@@ -1,0 +1,55 @@
+﻿<div class="container">
+    <div style="width:650px; margin: auto;">
+        <h1>User Management API  </h1>
+        <h3>C# Developer Logic Assessment - Ve Interactive  </h3>
+        </div>
+</div>
+<div class="container">
+    <div class="bd-example" data-example-id="" style="width:100%; margin-left:auto!important; margin-right:auto">
+        <div>
+            <h3>API Method 1: GetOTPasswordForUser</h3>
+            <div style="font-size:18px">
+                <p>
+                    Parameter - userId
+                    <li>"api/user/getOTPasswordForUser/{userId}" </li>
+                    <li>Example "localhost/api/user/getOTPasswordForUser/TestId" </li>
+                    <li>
+                        Return Model <code>
+                            {
+                            "UserId": "TestId",
+                            "OTPassword": "737969",
+                            "IsOTPasswordValid": true,
+                            "Message": "OTPassword: 737969 is valid until 30 seconds"
+                            }Return 
+                        </code>
+                    </li>
+                </p>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div>
+            <h3>API Method 2: ValidateOTPasswordForUser</h3>
+            <div style="font-size:18px">
+                <p>
+                    Parameter - userId, password
+                    <li>"api/user/validateOTPasswordForUser/{userId}/{password}" </li>
+                    <li>Example "localhost/api/user/validateOTPasswordForUser/TestId/510842" </li>
+                    <li>
+                        Return Model <code>
+                            {
+                            "UserId": "TestId",
+                            "OTPassword": "510842",
+                            "IsOTPasswordValid": false,
+                            "Message": "OTPassword is Invalid"
+                            }
+                        </code>
+                    </li>
+                </p>
+            </div>
+               
+            </div>
+        
+    </div>
+
+    </div>
