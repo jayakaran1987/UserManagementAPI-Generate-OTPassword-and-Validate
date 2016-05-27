@@ -90,7 +90,7 @@ namespace OTPGenerator.Test
                 userManagementService.ValidatePasswordForUser(user);
             }
             catch (Exception e)
-            {
+            { // user Assert.Throws (http://www.nunit.org/index.php?p=exceptionAsserts&r=2.5.10)
                 int? c = null;
                 if (e is CustomCodeException) c = (e as CustomCodeException).code;
                 Assert.That(c, Is.EqualTo(101));
@@ -129,7 +129,7 @@ namespace OTPGenerator.Test
             userManagementService.GetPasswordForUser(user);
 
             //hang the process for 31 second
-            System.Threading.Thread.Sleep(31000);
+            System.Threading.Thread.Sleep(31000); // this is making your test takes forever to run. Receive a Func<DateTime> or a IDateTimeProvider interface and mock it's value for what you want
 
             userManagementService.ValidatePasswordForUser(user);
 
